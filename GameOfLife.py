@@ -1,3 +1,41 @@
+'''
+The script implements a simple particle-system simulation on an 8×32 MAX7219 display.
+
+Each particle:
+
+has a position (x, y),
+performs a random walk,
+stores its own age counter.
+
+During each iteration:
+
+All particles move randomly by:
+-1, 0, or +1 in the X direction,
+-1, 0, or +1 in the Y direction.
+After movement, collisions are checked:
+if multiple particles occupy the same pixel,
+all of them annihilate and are removed.
+Every surviving particle increases its age.
+After surviving 10 cycles:
+a particle reproduces,
+a new particle is spawned at distance 2 from the parent,
+the parent age counter is reset.
+The current state of the system is rendered on the display.
+
+Additionally:
+
+particles are constrained to the 32×8 display boundaries,
+if the entire population disappears, a new random population is generated automatically.
+
+The system behaves as a simplified model of:
+
+diffusion,
+annihilation reactions,
+reproduction,
+dynamic population equilibrium.
+'''
+
+
 from machine import Pin, SPI
 import max7219
 import time
