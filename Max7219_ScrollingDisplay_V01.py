@@ -40,7 +40,7 @@ display = max7219.Matrix8x8(spi, ss, 4)
 display.brightness(10)
 
 #Define the scrolling message
-scrolling_message = "spektrofotometry, spektrofluorymetry, polarymetry, spektrometry FTIR, ramanowskie, i wiele innych :)"
+scrolling_message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
 
 #Get the message length
 length = len(scrolling_message)
